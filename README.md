@@ -1,4 +1,5 @@
 *RegisterPerson Application*
+
 **Overview**
 
 The RegisterPerson Application is a simple CRUD (Create, Read, Update, Delete) web application built using Spring Boot. It allows users to manage a list of people, each associated with a gender and birthdate. The application is styled using Twitter Bootstrap and uses Flyway for database migrations.
@@ -12,6 +13,7 @@ Features
 - Uses H2 in-memory database (can be configured to use other databases).
 - Flyway for schema migrations.
 - Spring Boot Actuator for application health monitoring.
+
 **Technologies Used**
 - Java 17 (or later)
 - Spring Boot 3.x
