@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Person List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Person List</h1>
+    <a href="/persons/new" class="btn btn-primary">Add Person</a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Birthday</th>
+            <th>Gender</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person : ${persons}">
+            <td th:text="${person.id}"></td>
+            <td th:text="${person.fullName}"></td>
+            <td th:text="${person.birthday}"></td>
+            <td th:text="${person.gender.name}"></td>
+            <td>
+                <a th:href="@{/persons/{id}(id=${person.id})}" class="btn btn-warning">Edit</a>
+                <a th:href="@{/persons/delete/{id}(id=${person.id})}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
